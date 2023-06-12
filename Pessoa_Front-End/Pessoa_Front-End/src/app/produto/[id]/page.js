@@ -14,7 +14,7 @@ export default async function Produto({ params }) {
         headers: { 'content-type': 'application/json' },
         body: idJson
     })
-    const pessoa = await req.json();
+    const produto = await req.json();
 
 
     const remover = () => {
