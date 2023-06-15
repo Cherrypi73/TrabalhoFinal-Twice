@@ -31,7 +31,7 @@ app.post('/produto', async function(req, res){
   }
 });
 
-app.post('/produto', async function(req,res){
+app.post('/produtos', async function(req,res){
   try{
     var produto = req.body
     var produto = await Produto.insert(produto);
@@ -41,7 +41,7 @@ app.post('/produto', async function(req,res){
   }
 })
 
-app.delete('/produtos', async function(req, res){
+app.delete('/produto', async function(req, res){
   try {
     console.log(req.body.id)
     var produto = await Produto.delete(req.body.id);

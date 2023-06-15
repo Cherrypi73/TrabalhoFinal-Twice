@@ -4,7 +4,7 @@ CREATE TABLE produtos (
 	data_cadastro DATE NOT NULL,
 	preco REAL NOT NULL,
 	descricao TEXT NOT NULL,
-	imagem TEXT NOT NULL
+	imagem string NOT NULL
 )
 
 INSERT INTO produtos(titulo, data_cadastro, preco, descricao, imagem) 
