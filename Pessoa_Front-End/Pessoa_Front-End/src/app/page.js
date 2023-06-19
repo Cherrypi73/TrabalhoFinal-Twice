@@ -14,7 +14,10 @@ export default async function Home() {
   const req = await fetch("http://localhost:3003/produto", {
     cache: "no-cache"
   });
-  const produtos = await req.json();
+
+  
+
+  const produtos = await req.json(); 
   
   const remover = async(id) => {
     const codigo = {id:parseInt(id)}
@@ -44,8 +47,10 @@ export default async function Home() {
       <CarouselComponent/>
       </div>
     <div className="grid grid-cols-5 gap-5 mt-6 ml-6 mr-6 ">
-      {produtos.map(produtos => (
-        <div className="border bg-white" key={produtos.codigo}>
+      {produtos.map(produtos => {
+        let date = new Date(produtos.data_cadastro);
+        let datinha = date.getDate() + '/' + (date.getMonth()+1) + '/' + date.getFullYear();
+        return (<div className="border bg-white" key={produtos.codigo}>
           <img className="mt-6"
           src={produtos.imagem}></img>
           <p className="font-bold text-xl ml-3 mt-6 mr-3">{produtos.titulo}</p>
@@ -53,7 +58,7 @@ export default async function Home() {
           <p className="font-semibold ml-3 mt-5">Valor: R${produtos.preco}</p>
           <p className="ml-3 mt-3">{produtos.descricao}</p>
 
-          <p className="ml-3 mt-3 mb-6">{produtos.data_cadastro}</p>
+          <p className="ml-3 mt-3 mb-6">{datinha}</p>
 
           <Link className="ml-3 hover:bg-zinc-300"
            href={`/produto/${produtos.codigo}`}>Ver mais</Link>
@@ -65,8 +70,8 @@ export default async function Home() {
             </div>
           
           
-        </div>
-      ))}
+        </div>)
+      })}
       </div>
       <Footer/>
     </div>
