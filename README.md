@@ -12,5 +12,7 @@ npm run dev
 npm install <br/>
 npm start
 </h3>
+<h3> Banco de dados se tiver sem internet</h3>
+<p> /*postgres://postgres:postgres@localhost/produto*/ </p>
 
 
