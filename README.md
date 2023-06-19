@@ -6,3 +6,9 @@ npm install <br/>
 npm install react-responsive-carousel <br/>
 npm i lucide-react
 </h3>
+
+<h3>Para iniciar o back-end de: <br/>
+npm install
+</h3>
+
+
