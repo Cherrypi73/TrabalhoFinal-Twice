@@ -10,7 +10,7 @@ app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));
-
+//permite que uma função assíncrona e sem bloqueio seja estruturada de maneira semelhante a uma função síncrona comum
 app.get('/produto', async function(req, res){ //O get é usado apenas para exibir/retornar valor, nunca pra alterar. Já o Set é usado quando você quer alterar o valor/conteúdo de um atributo
   try {
     var produtos = await Produto.select();
