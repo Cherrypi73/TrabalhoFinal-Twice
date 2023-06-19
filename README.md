@@ -4,11 +4,13 @@
 <h3>Para iniciar o front-end de: <br/>
 npm install <br/>
 npm install react-responsive-carousel <br/>
-npm i lucide-react
+npm i lucide-react <br/>
+npm run dev
 </h3>
 
 <h3>Para iniciar o back-end de: <br/>
-npm install
+npm install <br/>
+npm start
 </h3>
 
 
