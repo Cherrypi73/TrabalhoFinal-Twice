@@ -1,9 +1,9 @@
-const db = require("../db");
+const db = require("../db"); // requere o banco de dados de db
 
 class Produto{
-  static async select() {
+  static async select() { // seleciona a função estatica assincrona
     try {
-      const connect = await db.connect();
+      const connect = await db.connect(); //permite que uma função assíncrona e sem bloqueio seja estruturada de maneira semelhante a uma função síncrona comum
       const sql = "SELECT *FROM produtos"
       return await connect.query(sql);
     } catch (error) {
@@ -11,12 +11,12 @@ class Produto{
       throw error;
     }
   }
-  static async selectOne(id) {
+  static async selectOne(id) { //faz o select individual do id
     try {
       const connect = await db.connect();
       const sql = "SELECT *FROM produtos WHERE codigo=$1";
       return await connect.query(sql,[id]);
-    } catch (error) {
+    } catch (error) { //query() realiza uma consulta simples, a cada chamada uma consulta é enviada para o banco, ao utilizar esse método o programador é responsável por sanitizar os valores passados
       console.error('Erro em select:', error);
       throw error;
     }
