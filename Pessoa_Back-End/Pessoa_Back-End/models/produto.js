@@ -22,7 +22,7 @@ class Produto{
     }
   }
 
-  static async insert(data) {
+  static async insert(data) { //O método update modifica a entidade especificada do objeto de dados raiz
     try {
       const connect = await db.connect();
       const sql = "INSERT INTO produtos (titulo, data_cadastro, preco, descricao, imagem) VALUES ($1, $2, $3, $4,$5) RETURNING titulo, data_cadastro, preco, descricao, imagem;";
