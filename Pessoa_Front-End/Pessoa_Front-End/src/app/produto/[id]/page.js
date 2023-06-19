@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 export default async function Produto({ params }) {
     const router = useRouter();
     const id = { id: parseInt(params.id) }
-
+    
     const idJson = JSON.stringify(id);
 
     const req = await fetch("http://localhost:3003/produto", {
@@ -18,7 +18,7 @@ export default async function Produto({ params }) {
     const produto = await req.json();
 
 
-   
+    
     return (
         <div className="h-screen">
             <div className="">
@@ -39,7 +39,7 @@ export default async function Produto({ params }) {
             <p className="font-serif font-bold text-4xl ml-3 mt-16 mr-3 mb-10">{produto.titulo}</p>
             <p className="font-semibold text-3xl ml-3 mt-12 mb-10">Valor: R${produto.preco}</p>
             <p className="font-semibold text-2xl ml-3 mt-16 mb-10 mr-6">{produto.descricao}</p>
-            <p className="ml-3 text-xl mt-20">{produto.data_cadastro}</p>
+            
             
             </div>
 

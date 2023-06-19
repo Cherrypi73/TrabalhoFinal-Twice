@@ -58,7 +58,7 @@ export default async function Home() {
           <p className="font-semibold ml-3 mt-5">Valor: R${produtos.preco}</p>
           <p className="ml-3 mt-3">{produtos.descricao}</p>
 
-          <p className="ml-3 mt-3 mb-6">{datinha}</p>
+          <p className="ml-3 mt-3 mb-6">Data de Cadastro: {datinha}</p>
 
           <Link className="ml-3 hover:bg-zinc-300"
            href={`/produto/${produtos.codigo}`}>Ver mais</Link>
