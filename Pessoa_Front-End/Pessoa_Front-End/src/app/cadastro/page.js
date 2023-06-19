@@ -64,28 +64,28 @@ export default function Cadastro() {
                     onChange={e => setTitulo(e.target.value)}
                 /><br/>
                 <input
-                    className="text-xl mt-5 h-20 mb-10 w-96 border-dashed border-b border-zinc-500 bg-zinc-100"
+                    className="text-xl mt-5 p-5 h-20 mb-10 w-96 border-dashed border-b border-zinc-500 bg-zinc-100"
                     type="date"
                     placeholder='Data de cadastro:'
                     nome="data_cadastro"
                     onChange={e => setData_cadastro(e.target.value)}
                 /><br/>
                 <input
-                    className="text-xl mt-5 h-20 mb-10 w-96 border-dashed border-b border-zinc-500 bg-zinc-100"
+                    className="text-xl mt-5 p-5 h-20 mb-10 w-96 border-dashed border-b border-zinc-500 bg-zinc-100"
                     type="number"
                     placeholder='Preço:'
                     nome="preco"
                     onChange={e => setPreco(e.target.value)}
                 /><br/>
                 <input
-                    className="text-xl mt-5 h-20 mb-10 w-96 border-dashed border-b border-zinc-500 bg-zinc-100"
+                    className="text-xl mt-5 p-5 h-20 mb-10 w-96 border-dashed border-b border-zinc-500 bg-zinc-100"
                     type="text"
                     placeholder='Descrição:'
                     nome="descricao"
                     onChange={e => setDescricao(e.target.value)}
                 /><br/>
                 <input
-                    className="text-xl mt-5 h-20 mb-10 w-96 border-dashed border-b border-zinc-500 bg-zinc-100 "
+                    className="text-xl mt-5 p-5 h-20 mb-10 w-96 border-dashed border-b border-zinc-500 bg-zinc-100 "
                     type="text"
                     placeholder='Imagem do Produto:'
                     nome="imagem"
