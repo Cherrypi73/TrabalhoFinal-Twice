@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/produto', async function(req, res){
+app.get('/produto', async function(req, res){ //O get é usado apenas para exibir/retornar valor, nunca pra alterar. Já o Set é usado quando você quer alterar o valor/conteúdo de um atributo
   try {
     var produtos = await Produto.select();
     res.json(produtos.rows);
@@ -21,7 +21,7 @@ app.get('/produto', async function(req, res){
   }
 });
 
-app.post('/produto', async function(req, res){
+app.post('/produto', async function(req, res){ // é usado quando o cliente deseja enviar dados para processamento ao servidor
   try {
     var produto = await Produto.selectOne(req.body.id);
     res.json(produto.rows[0]);
@@ -31,7 +31,7 @@ app.post('/produto', async function(req, res){
   }
 });
 
-app.post('/produtos', async function(req,res){
+app.post('/produtos', async function(req,res){ // é usado quando o cliente deseja enviar dados para processamento ao servidor
   try{
     var produto = req.body
     var produto = await Produto.insert(produto);
@@ -53,6 +53,6 @@ app.delete('/produto', async function(req, res){
 });
 
 
-app.listen(3003, function() {
+app.listen(3003, function() { //lincar com a porta
   console.log(`app de Exemplo escutando na porta! ${3003}`)
 });
