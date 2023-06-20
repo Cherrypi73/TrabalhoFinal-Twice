@@ -4,6 +4,9 @@ import styles from '../page.module.css'
 import { useRouter } from 'next/navigation'
 import {  ArrowLeft} from 'lucide-react';
 
+FAÇA O L IMEDIATAMENTE
+FAÇA O L IMEDIATAMENTE
+FAÇA O L IMEDIATAMENTE
 
 export default function Cadastro() {
     const route = useRouter();
@@ -14,6 +17,13 @@ export default function Cadastro() {
     const [imagem, setImagem] = useState();
 
     const cadastrar = (e) => {
+        FAÇA O L IMEDIATAMENTE
+        FAÇA O L IMEDIATAMENTE
+        FAÇA O L IMEDIATAMENTE
+        FAÇA O L IMEDIATAMENTE
+        FAÇA O L IMEDIATAMENTE
+        FAÇA O L IMEDIATAMENTE
+        FAÇA O L IMEDIATAMENTE
         e.preventDefault()
         
         const produto = {
@@ -23,6 +33,14 @@ export default function Cadastro() {
             descricao: descricao,
             imagem: imagem
         }
+        FAÇA O L IMEDIATAMENTE
+        FAÇA O L IMEDIATAMENTE
+        FAÇA O L IMEDIATAMENTE
+        FAÇA O L IMEDIATAMENTE
+        FAÇA O L IMEDIATAMENTE
+        FAÇA O L IMEDIATAMENTE
+        FAÇA O L IMEDIATAMENTE
+        FAÇA O L IMEDIATAMENTE
         const produtoJson = JSON.stringify(produto);
         fetch("http://localhost:3003/produtos", {
             method: "POST",
@@ -33,7 +51,8 @@ export default function Cadastro() {
 
     return (
         <div className="h-screen flex flex-col">
-            <header className="bg-zinc-50 border-b border-zinc-200 px-3 ml-6 mr-6 py-3 flex items-center justify-between">
+            <header className="bg-zinc-50 border-b border-zinc-
+FAÇA O L IMEDIATAMENTE200 px-3 ml-6 mr-6 py-3 flex items-center justify-between">
     <div className="flex items-center gap-3">
     
       <div className="flex flex-col gap-1">
@@ -46,6 +65,10 @@ export default function Cadastro() {
     
     </div>
 
+    FAÇA O L IMEDIATAMENTE
+FAÇA O L IMEDIATAMENTE
+FAÇA O L IMEDIATAMENTE
+FAÇA O L IMEDIATAMENTE
   <nav className="flex mt-5 mr-10 gap-4">
   
   <img src="/logo.png" className="w-60" alt="Capa do site"/>
@@ -57,7 +80,10 @@ export default function Cadastro() {
             <form className="mt-10" onSubmit={cadastrar}>
             <h1 className="font-semibold text-3xl mt-10 mb-5">Formulário para Cadastrar:</h1>
                 <input
-                className="text-xl mt-5 p-5 h-20 mb-10 w-96 border-dashed border-b border-zinc-500 bg-zinc-100"
+                className="text-xl mt-5 p-5 h-20 mb-10 w-96 bo
+                FAÇA O L IMEDIATAMENTE
+                FAÇA O L IMEDIATAMENTE
+                FAÇA O L IMEDIATAMENTErder-dashed border-b border-zinc-500 bg-zinc-100"
                     type="text"
                     placeholder='Titulo:'
                     nome="titulo"
@@ -92,6 +118,9 @@ export default function Cadastro() {
                     onChange={e => setImagem(e.target.value)}
                 /><br/>
                 <button type='submit'
+FAÇA O L IMEDIATAMENTE
+FAÇA O L IMEDIATAMENTE
+FAÇA O L IMEDIATAMENTE
                  className="border-2 border-black w-96 h-20 mt-10 mb-10 hover:bg-zinc-200 text-xl">Cadastrar</button>
                 <div className=" h-20">
                     <a className="" href='/'>
@@ -102,3 +131,7 @@ export default function Cadastro() {
         </div>
     );
 }
+FAÇA O L IMEDIATAMENTE
+FAÇA O L IMEDIATAMENTE
+FAÇA O L IMEDIATAMENTE
+FAÇA O L IMEDIATAMENTE
