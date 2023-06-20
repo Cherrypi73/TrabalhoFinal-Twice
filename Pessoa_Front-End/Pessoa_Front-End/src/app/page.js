@@ -8,7 +8,6 @@ import CarouselComponent from './componentes/Carrocel';
 import { Footer } from './componentes/Footer';
 
 
-
 export default async function Home() {
  const router = useRouter();
   const req = await fetch("http://localhost:3003/produto", {
@@ -62,7 +61,6 @@ export default async function Home() {
 
           <Link className="ml-3 hover:bg-zinc-300"
            href={`/produto/${produtos.codigo}`}>Ver mais</Link>
-
           <div className="flex flex-row-reverse">
             <button className="mt-6 mr-6 mb-3" 
           onClick={e => e.preventDefault(remover(produtos.codigo))}>
